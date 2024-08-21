@@ -32,7 +32,7 @@ const useEffect = (callback, depArray) => {
 
   const hasChangedDeps = prevDeps
     ? !depArray.every((el, i) => el === prevDeps[i])
-    : true; // 의존성 배열이 변경되었는지 확인, 같지않다면 callback을 실행시키고 _deps를 유저의 의존성배열로 치환시켜줌
+    : true; // 의존성 배열이 변경되었는지 확인, 같지않다면 callback을 실행시키고 prevDeps를 유저의 의존성배열로 치환시켜줌
 
   if (hasNoDeps || hasChangedDeps) {
     if (prevCleanUp) prevCleanUp(); // 이전 클린업함수가 있다면 그거로 실행
