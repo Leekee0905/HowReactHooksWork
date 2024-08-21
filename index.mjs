@@ -13,7 +13,7 @@ function ExampleComponent() {
     click: () => setCount(count + 1),
     type: (text) => setText(text),
     noop: () => setCount(count),
-    render: () => console.log("render", { count, text }), // 현재 상태 출력하도록 변경
+    render: () => console.log("render", { count, text }), // 현재 상태 출력
   };
 }
 
